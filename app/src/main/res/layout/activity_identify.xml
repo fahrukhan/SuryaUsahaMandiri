@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightBackground"
+    tools:context=".activities.ui.identify.IdentifyActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/ThemeOverlay.Material3.Toolbar.Surface"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextAppearance.Material3.TitleLarge"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="Identify"
+                android:textColor="@color/white" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/settingBtn"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="12dp"
+                android:insetLeft="0dp"
+                android:insetTop="0dp"
+                android:insetRight="0dp"
+                android:insetBottom="0dp"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                app:icon="@drawable/ic_settings_24"
+                app:iconGravity="textEnd"
+                app:iconPadding="0dp"
+                app:iconTint="@color/white"
+                app:rippleColor="#36FFFFFF"
+                app:strokeWidth="0dp" />
+        </LinearLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:id="@+id/history_line1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/scanBtn"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <!-- bin card        -->
+        <LinearLayout
+            android:id="@+id/tumblerInfoLine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            tools:ignore="UseCompoundDrawables">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/ll_batch_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:background="@drawable/bg_outline"
+                    android:orientation="vertical"
+                    tools:ignore="UselessParent">
+
+                    <TextView
+                        android:id="@+id/rfidTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/geolab"
+                        android:text="@string/minus"
+                        android:textSize="20sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/gray_300"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!--                    <ImageView-->
+                        <!--                        android:visibility="gone"-->
+                        <!--                        android:id="@+id/bCodeImg"-->
+                        <!--                        android:layout_width="0dp"-->
+                        <!--                        android:layout_weight="1"-->
+                        <!--                        android:layout_height="64dp"-->
+                        <!--                        android:contentDescription="@string/no_description"-->
+                        <!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/geolab"
+                                android:id="@+id/batchInQtyTv"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/geolab"
+                                android:id="@+id/uomCodeTv"/>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/gray_300"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/lotTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/geolab"
+                                android:text="@string/minus" />
+                            <TextView
+                                android:id="@+id/cusColor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="20sp"
+                                android:fontFamily="@font/geolab"
+                                android:text="@string/minus" />
+                        </LinearLayout>
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="@color/gray_300"/>
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <ImageView
+                                android:id="@+id/qrCodeImg"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center_horizontal"
+                                android:contentDescription="@string/no_description"
+                                android:src="@drawable/ic_qr_code_2_24" />
+                        </FrameLayout>
+
+
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/gray_300"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        style="@style/TextAppearance.Material3.TitleMedium"
+                        android:text="@string/minus"
+                        android:id="@+id/batchNoTv"/>
+                    <TextView
+                        android:id="@+id/prodCodeTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Material3.LabelMedium"
+                        android:text="@string/minus" />
+                    <TextView
+                        android:id="@+id/prodNameTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.Material3.LabelMedium"
+                        android:text="@string/minus" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.Material3.LabelMedium"
+                                android:text="Brand" />
+                            <TextView
+                                android:id="@+id/colorTv"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/TextAppearance.Material3.LabelMedium"
+                                android:text="@string/cust_color_hint" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_wait_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="64dp"
+                    android:layout_alignStart="@+id/ll_batch_data"
+                    android:layout_alignEnd="@id/ll_batch_data"
+                    android:layout_alignBottom="@+id/ll_batch_data"
+                    android:layout_margin="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="MENUNGGU RESULT VERPACKING" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="History"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/primaryColor"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/identifyRv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/primaryColor"/>
+        </LinearLayout>
+    </LinearLayout>
+
+<!--    <ProgressBar-->
+<!--        android:layout_width="32dp"-->
+<!--        android:layout_height="32dp"-->
+<!--        android:indeterminateTint="@color/primaryColor"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/history_line1"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/history_line1"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/history_line1"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/history_line1" />-->
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/scanBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp"
+        android:text="@string/btn_scan" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

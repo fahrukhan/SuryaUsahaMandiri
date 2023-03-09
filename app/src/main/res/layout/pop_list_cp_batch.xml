@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        android:id="@+id/popSearch_frame1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor">
+        <TextView
+            android:id="@+id/popList_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_margin="12dp"
+            style="@style/TextAppearance.AppCompat.Title" />
+    </FrameLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/popSearch_tiLy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/popSearch_frame1"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/ic_search_24"
+        android:hint="@string/select_cp_number"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapCharacters"
+            android:id="@+id/popSearch_inputSearch"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ListView
+        android:id="@+id/popSearch_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/popSearch_tiLy"
+        android:layout_above="@+id/cancelBtn"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="@string/btn_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        style="@style/Widget.Material3.Button.TextButton.Dialog"/>
+</RelativeLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="lightBackground">#E7E7E7</color>
+    <color name="tableHeadBackground">#80EAEAEA</color>
+    <color name="cardHeadBackground">#808080</color>
+
+    <color name="secondaryTextLight">#80686868</color>
+    <color name="tertiaryTextLight">#80D4D4D4</color>
+
+    <!--    <color name="primaryColor">#65B3D6</color>-->
+    <!--    <color name="primaryColorDark">#65B3D6</color>-->
+
+    <color name="primaryColor">#031C45</color>
+    <color name="primaryColorDark">#031C45</color>
+    <color name="buttonPrimary">#F3B001</color>
+
+    <color name="highLightText">#F6D9D9</color>
+
+    <color name="primaryColorLight">#76BBDA</color>
+
+    <!--    <color name="secondaryColor">#6965D6</color>-->
+    <!--    <color name="secondaryColorDark">#6965D6</color>-->
+    <color name="secondaryColor">#E51A51</color>
+    <color name="secondaryColorDark">#E51A51</color>
+
+    <color name="navy">#1C3B71</color>
+
+    //material 50
+    <color name="yellow_50">#fffde7</color>
+
+    //material 300
+    <color name="red_300">#E57373</color>
+    <color name="pink_300">#F06292</color>
+    <color name="purple_300">#BA68C8</color>
+    <color name="deepPurple_300">#9575CD</color>
+    <color name="indigo_300">#7986CB</color>
+    <color name="blue_300">#64B5F6</color>
+    <color name="lightBlue_300">#4FC3F7</color>
+    <color name="cyan_300">#4DD0E1</color>
+    <color name="teal_300">#4DB6AC</color>
+    <color name="green_300">#81C784</color>
+    <color name="lightGreen_300">#AED581</color>
+    <color name="lime_300">#DCE775</color>
+    <color name="yellow_300">#FFF176</color>
+    <color name="amber_300">#FFD54F</color>
+    <color name="orange_300">#FFB74D</color>
+    <color name="deepOrange_300">#FF8A65</color>
+    <color name="brown_300">#A1887F</color>
+    <color name="gray_300">#E0E0E0</color>
+    <color name="blueGray_300">#90A4AE</color>
+
+    //material 400
+    <color name="red_400">#EF5350</color>
+    <color name="pink_400">#EC407A</color>
+    <color name="purple_400">#AB47BC</color>
+    <color name="deepPurple_400">#7E57C2</color>
+    <color name="indigo_400">#5C6BC0</color>
+    <color name="blue_400">#42A5F5</color>
+    <color name="lightBlue_400">#29B6F6</color>
+    <color name="cyan_400">#26C6DA</color>
+    <color name="teal_400">#26A69A</color>
+    <color name="green_400">#66BB6A</color>
+    <color name="lightGreen_400">#9CCC65</color>
+    <color name="lime_400">#D4E157</color>
+    <color name="yellow_400">#FFEE58</color>
+    <color name="amber_400">#FFCA28</color>
+    <color name="orange_400">#FFA726</color>
+    <color name="deepOrange_400">#FF7043</color>
+    <color name="brown_400">#8D6E63</color>
+    <color name="gray_400">#BDBDBD</color>
+    <color name="blueGray_400">#78909C</color>
+
+    //Tos
+    <color name="errorColor">#D50000</color>
+    <color name="infoColor">#3F51B5</color>
+    <color name="normalColor">#353A3E</color>
+    <color name="successColor">#388E3C</color>
+    <color name="warningColor">#FFA900</color>
+
+
+</resources>

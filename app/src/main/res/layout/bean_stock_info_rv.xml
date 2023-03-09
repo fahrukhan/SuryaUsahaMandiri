@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/no"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:layout_marginStart="4dp"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:text="@string/minus"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/prodName"
+                style="@style/TextAppearance.Material3.LabelSmall"
+                android:text="@string/minus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/prodNo"
+                style="@style/TextAppearance.Material3.LabelSmall"
+                android:textColor="@color/secondaryTextLight"
+                android:textStyle="italic"
+                android:text="@string/minus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/prodQty"
+            style="@style/TextAppearance.Material3.LabelSmall"
+            android:text="@string/minus"
+            android:textAlignment="center"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:id="@+id/infoIc"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_info_outline_white_24dp"
+            app:tint="@color/primaryColor"
+            android:contentDescription="@string/no_description"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/gray_300"/>
+
+</LinearLayout>

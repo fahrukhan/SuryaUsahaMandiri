@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <com.rfid.sum.widget.BGABadgeMaterialButton
+        android:id="@+id/beanGrid_button"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:visibility="visible"
+        app:cornerRadius="8dp"
+        app:elevation="4dp"
+        app:icon="@drawable/ic_info"
+        app:iconTintMode="src_atop"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="48dp">
+
+    </com.rfid.sum.widget.BGABadgeMaterialButton>
+
+    <com.google.android.material.card.MaterialCardView
+        android:visibility="gone"
+        android:id="@+id/card"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <FrameLayout
+            android:id="@+id/bg_menuIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/beanGrid_menuIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="14dp"
+                android:contentDescription="@string/no_description"
+                android:src="@drawable/ic_info"
+                app:tint="@color/primaryColorDark" />
+        </FrameLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/beanGrid_menuTitle"
+        style="@style/TextAppearance.Material3.LabelSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/beanGrid_button"
+        android:layout_alignStart="@+id/beanGrid_button"
+        android:layout_alignEnd="@+id/beanGrid_button"
+        android:layout_marginBottom="8dp"
+        android:text="Menu Item"
+        android:textAlignment="center"
+        android:textColor="#616161" />
+</RelativeLayout>

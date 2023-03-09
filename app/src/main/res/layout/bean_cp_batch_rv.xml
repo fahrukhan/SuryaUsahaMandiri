@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/batchNo"
+                    style="@style/TextAppearance.Material3.LabelMedium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minus"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/prodName"
+                    style="@style/TextAppearance.Material3.LabelSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minus"
+                    android:textColor="@color/secondaryTextLight" />
+
+                <TextView
+
+                    style="@style/TextAppearance.Material3.LabelSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minus"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/img_rfid_ic"
+                    app:tint="@color/secondaryTextLight"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/no_description"
+                    android:src="@drawable/ic_label_24" />
+
+                <TextView
+                    android:id="@+id/rfid"
+                    style="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/minus" />
+
+                <ImageView
+                    android:id="@+id/ic_after_rfid"
+                    android:visibility="visible"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_check"
+                    app:tint="@color/green_300"
+                    android:contentDescription="@string/no_description"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/scanBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textSize="11sp"
+            android:text="@string/btn_scan"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:visibility="visible"
+            android:id="@+id/removeBtn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:icon="@drawable/ic_clear_24"
+            app:iconPadding="0dp"
+            app:iconGravity="textStart"
+            app:iconTint="@color/red_300"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/red_300"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:visibility="gone"
+            android:id="@+id/clearBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:strokeColor="@color/red_300"
+            android:textColor="@color/red_300"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:insetLeft="0dp"
+            android:insetRight="0dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:textSize="11sp"
+            android:text="@string/btn_clear"/>
+    </LinearLayout>
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_msg"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:padding="0dp"
+        style="@style/Widget.Material3.Chip.Assist"
+        app:chipStartPadding="0dp"
+        app:chipEndPadding="0dp"
+        app:chipMinHeight="16dp"
+        app:chipMinTouchTargetSize="0dp"
+        android:textSize="11sp"
+        app:chipStrokeColor="@color/red_400"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/gray_400" />
+
+    <View
+        android:id="@+id/finishLine"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+</LinearLayout>
+

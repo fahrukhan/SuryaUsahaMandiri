@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/title_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/primaryColor"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            style="@style/TextAppearance.Material3.TitleMedium" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_edit_note_24"
+            android:contentDescription="@string/no_description"/>
+    </LinearLayout>
+
+    <!-- Note -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_note"
+        app:layout_constraintTop_toBottomOf="@+id/title_frame"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:counterEnabled="true"
+        app:counterMaxLength="160"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/note_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|start"
+            android:minLines="2"
+            android:maxLines="3"
+            android:inputType="textMultiLine"
+            android:fontFamily="monospace"
+            android:maxLength="160"
+            android:textColor="@color/primaryColor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Qty -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_qty"
+        app:layout_constraintTop_toBottomOf="@+id/til_note"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:hint="@string/result_qty_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/qty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:digits="0123456789."
+            android:fontFamily="monospace"
+            android:maxLength="14"
+            android:textColor="@color/primaryColor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/til_qty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:minHeight="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/btn_delete_note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:strokeColor="@color/red_300"
+        android:textColor="@color/red_300"
+        style="@style/SmallOutlineButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/til_qty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/save_btn"
+        android:minHeight="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/btn_cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:strokeColor="@color/blueGray_300"
+        android:textColor="@color/blueGray_400"
+        style="@style/SmallOutlineButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/til_qty"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:minHeight="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/save_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:backgroundTint="@color/primaryColor"
+        android:textColor="@color/white"
+        style="@style/SmallButton"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

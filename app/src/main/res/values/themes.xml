@@ -1,0 +1,110 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SuryaUsahaMandiri" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="OutlineButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="materialButtonStyle">@style/Widget.Material3.Button.OutlinedButton</item>
+        <item name="boxStrokeColor">@color/buttonPrimary</item>
+        <item name="colorPrimary">@color/yellow_300</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.MyApp.Button.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="fabScan" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="rippleColor">@color/primaryColor</item>
+        <item name="srcCompat">@drawable/ic_play_arrow_24</item>
+        <item name="tint">@android:color/white</item>
+        <item name="elevation">5dp</item>
+        <item name="fabCustomSize">54dp</item>
+        <item name="maxImageSize">24dp</item>
+        <item name="pfab_animationDuration">2000</item>
+        <item name="pfab_arcProportion">0.5</item>
+        <item name="pfab_color">@color/white</item>
+        <item name="pfab_margin">2dp</item>
+        <item name="pfab_showEditModePreview">true</item>
+        <item name="pfab_startAngel">180</item>
+        <item name="pfab_width">1dp</item>
+        <item name="android:layout_marginStart">14dp</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginEnd">14dp</item>
+        <item name="android:layout_marginBottom">14dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlayExtended" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50dp</item>
+    </style>
+
+    <style name="SmallOutlineButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="SmallButton" parent="Widget.Material3.Button">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="ToolbarButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="iconTint">@color/primaryColor</item>
+        <item name="rippleColor">@color/orange_400</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Sum.Stock.Toggle.Button" parent="Widget.Material3.Button.ElevatedButton.Icon">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Button.TextButton</item>
+        <!--        <item name="android:textAppearance">@style/TextAppearance.App.Button</item>-->
+        <item name="backgroundTint">@color/toggle_group_background_selector</item>
+        <item name="android:textColor">@color/toggle_group_text_color_selector</item>
+        <item name="iconTint">@color/lightBackground</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Button.TextButton" parent="">
+        <item name="colorPrimary">@color/primaryColor</item>
+    </style>
+
+    <style name="MaterialCircleButton" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="iconGravity">textEnd</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="minHeight">0dp</item>
+        <item name="minWidth">0dp</item>
+    </style>
+</resources>

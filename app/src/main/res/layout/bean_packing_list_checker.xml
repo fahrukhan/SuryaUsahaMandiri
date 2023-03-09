@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="top"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/no"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:layout_marginStart="8dp"
+            android:layout_width="22dp"
+            android:layout_height="wrap_content"
+            android:text="@string/minus"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dolNo"
+                style="@style/TextAppearance.Material3.TitleSmall"
+                android:textColor="@color/black"
+                android:text="@string/minus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/prodQty"
+            style="@style/TextAppearance.Material3.TitleSmall"
+            android:text="@string/minus"
+            android:textAlignment="textStart"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/prodDetect"
+            style="@style/TextAppearance.Material3.TitleSmall"
+            android:text="@string/minus"
+            android:textAlignment="textStart"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content" />
+<!--        <ImageView-->
+<!--            android:id="@+id/prodCheck"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:src="@drawable/ic_minus_square"-->
+<!--            app:tint="@color/lightBackground"-->
+<!--            android:layout_height="16dp"-->
+<!--            android:contentDescription="@string/no_description" />-->
+    </LinearLayout>
+    <TextView
+        android:id="@+id/prodName"
+        style="@style/TextAppearance.Material3.LabelSmall"
+        android:text="@string/minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#363636"
+        android:layout_marginStart="30dp" />
+    <TextView
+        android:id="@+id/prodCode"
+        style="@style/TextAppearance.Material3.LabelSmall"
+        android:text="@string/minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#616161"
+        android:layout_marginStart="30dp" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/batch_rv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="12dp"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/line_chip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/gray_300"/>
+<!--        <com.google.android.material.chip.ChipGroup-->
+<!--            android:id="@+id/chip_group"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginBottom="12dp"-->
+<!--            android:layout_marginTop="8dp" />-->
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/gray_300"/>
+    <Space
+        android:id="@+id/botSpace"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+</LinearLayout>

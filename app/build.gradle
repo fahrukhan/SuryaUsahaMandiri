@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.rfid.sum"
+        minSdk 26
+        targetSdk 33
+        versionCode 2
+        versionName "1.1"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+//    viewBinding{
+//        enabled true
+//    }
+    buildFeatures {
+        viewBinding true
+    }
+    namespace 'com.rfid.sum'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.annotation:annotation:1.5.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation "androidx.activity:activity-ktx:1.6.1"
+
+    //Async
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'io.reactivex:rxjava:1.2.1'
+
+    // Utility
+    implementation 'com.github.GrenderG:Toasty:1.5.2'
+    implementation 'com.github.razir.progressbutton:progressbutton:2.1.0'
+    //implementation 'nl.bryanderidder:themed-toggle-button-group:1.4.1'
+    implementation('com.github.SumiMakito:AwesomeQRCode:1.2.0'){
+        exclude group: 'com.waynejo', module: 'androidndkgif' // exclude jcenter module
+    }
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+    implementation 'com.dinuscxj:circleprogressbar:1.3.6'
+    implementation('com.github.zcweng:switch-button:0.0.3@aar')
+
+    //Api Handler
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'com.google.code.gson:gson:2.9.1'
+
+    //Badge
+    implementation 'com.github.bingoogolapple.BGABadgeView-Android:api:1.2.0'
+    annotationProcessor 'com.github.bingoogolapple.BGABadgeView-Android:compiler:1.2.0'
+
+    //Room DB
+    implementation "androidx.room:room-ktx:2.5.0-beta01"
+    kapt "androidx.room:room-compiler:2.5.0-beta01"
+    androidTestImplementation "androidx.room:room-testing:2.5.0-beta01"
+
+    //anim
+    implementation 'com.daimajia.androidanimations:library:2.4@aar'
+
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1")
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.5.1"
+}

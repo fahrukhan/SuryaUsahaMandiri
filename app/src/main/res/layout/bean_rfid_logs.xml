@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/beanHistory_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Space
+        android:id="@+id/topSpace"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"/>
+
+    <LinearLayout
+        android:id="@+id/beanHistory_line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topSpace"
+        android:gravity="top"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/beanHistory_frame1"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_circle_dotted">
+
+            <ImageView
+                android:id="@+id/beanHistory_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/no_description"
+                android:src="@drawable/ic_info_outline_white_24dp"
+                app:tint="@color/primaryColor" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/noteTv"
+                style="@style/TextAppearance.Material3.LabelMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_calendar"
+                    app:tint="@color/secondaryTextLight"
+                    android:contentDescription="@string/no_description"/>
+                <TextView
+                    android:id="@+id/dateTimeTv"
+                    style="@style/TextAppearance.Material3.LabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondaryTextLight" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:src="@drawable/ic_person"
+                    app:tint="@color/secondaryTextLight"
+                    android:contentDescription="@string/no_description"/>
+                <TextView
+                    android:id="@+id/userTv"
+                    style="@style/TextAppearance.Material3.LabelSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondaryTextLight" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/lineConnector"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:layout_alignBottom="@+id/beanHistory_line1"
+        android:layout_alignTop="@+id/beanHistory_line1"
+        android:background="@color/secondaryTextLight"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_below="@id/beanHistory_line1"
+        android:contentDescription="@string/no_description" />
+
+
+</RelativeLayout>

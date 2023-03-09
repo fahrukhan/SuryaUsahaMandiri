@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="14dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:src="@drawable/ic_warehouse"
+            android:contentDescription="@string/no_description"/>
+        <TextView
+            android:id="@+id/whName"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="4dp"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:text="@string/minus"/>
+        <TextView
+            android:id="@+id/qtyTv"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            style="@style/TextAppearance.Material3.LabelMedium"
+            android:text="@string/minus"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/arrowBtn"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="14dp"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            app:strokeColor="@color/white"
+            android:insetRight="0dp"
+            android:insetLeft="0dp"
+            android:insetBottom="0dp"
+            android:insetTop="0dp"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:icon="@drawable/ic_keyboard_arrow_right_24"/>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:id="@+id/seriesRv"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray_300"/>
+
+</LinearLayout>
