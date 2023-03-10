@@ -78,6 +78,7 @@ class OutboundHistory : BaseBinding<ActivityOutboundHistoryBinding>() {
                     wait.hide()
                     if (success){
                         val list = castListModel<OutboundModel>()
+                        historyList.clear()
                         if (list.isNotEmpty()){
                             historyList.addAll(list)
                             hAdapter.notifyDataSetChanged()
@@ -89,7 +90,6 @@ class OutboundHistory : BaseBinding<ActivityOutboundHistoryBinding>() {
             }
         },session.getUser()?.token)
     }
-
 
     // <editor-fold defaultstate="collapsed" desc="Adapter">
     inner class Adapter: RecyclerView.Adapter<Adapter.Holder>(){

@@ -26,6 +26,10 @@ data class OutboundModel(
 	val id: Int? = null,
 
 	@field:SerializedName("outbound_details")
-	val outboundDetails: List<ItemModel>? = null
+	val outboundDetails: List<ItemModel>? = null,
+
+	@field:SerializedName("user")
+	val user: UserModel? = null
+
 )
 

@@ -62,6 +62,7 @@ class OutboundHistoryDetails : BaseBinding<ActivityOutboundHistoryDetailsBinding
         pop = Pop(this)
         with(bind){
             tvReceiptNumber.text = oId?.receiptNumber
+            tvUserName.text = oId?.user?.name
             outboundDate.text = oId?.at
             rvDetails.apply {
                 layoutManager = LinearLayoutManager(this@OutboundHistoryDetails)

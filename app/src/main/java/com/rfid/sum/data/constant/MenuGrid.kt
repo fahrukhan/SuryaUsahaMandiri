@@ -34,7 +34,7 @@ object MenuGrid {
             reqAuthorization = true
         ),
         MenuGridModel(
-            "TAG UPDATE",
+            "UPDATE",
             "rfid-registration",
             R.drawable.ic_rfid_tag_update,
             0,

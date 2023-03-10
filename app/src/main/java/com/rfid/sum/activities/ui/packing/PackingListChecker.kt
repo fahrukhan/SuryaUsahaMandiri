@@ -39,7 +39,7 @@ import java.text.Normalizer.Form
 class PackingListChecker : BaseBinding<ActivityPackingListCheckerBinding>(), NciApiListener,
     UHFScanning {
     override fun getViewBinding() = ActivityPackingListCheckerBinding.inflate(layoutInflater)
-    override fun useReader() = true
+    override fun useReader() = false
 
     private val packingListLoaded = mutableListOf<DolsListModel>()
     private val packingListLoadedFiltered = mutableListOf<DolsListModel>()
@@ -131,8 +131,7 @@ class PackingListChecker : BaseBinding<ActivityPackingListCheckerBinding>(), Nci
                             if (success){
                                 val list = castListModel<String>()
                                 if (list.isNotEmpty()) {
-                                    tos.success("Berhasil disimpan")
-                                    finish()
+                                    showSuccessDialog(message)
                                 }
                                 else tos.info("Tidak ada batch terdeteksi.")
                             }else{
@@ -144,7 +143,7 @@ class PackingListChecker : BaseBinding<ActivityPackingListCheckerBinding>(), Nci
             }
 
             btScan.setOnClickListener {
-//                val a = listOf( "E280382120006022018777A0", "E280382120006022018777A8", "E280382120006022018777A4")
+//                val a = listOf( "E2003412013318000510C59A","E2003412013218000510C85F","E2003412013D18000510C77A","E2003412012C18000510C70D")
 //                if (detectionList.isNotEmpty()) {
 //                    detectionList.clear()
 //                    return@setOnClickListener
@@ -153,11 +152,7 @@ class PackingListChecker : BaseBinding<ActivityPackingListCheckerBinding>(), Nci
 //                runOnUiThread {
 //                    val b = (200..2000).random()
 //                    a.forEach {
-//                        val msg = handler.obtainMessage(0)
-//                        msg.obj = it
-//
-//                        Thread.sleep(b.toLong())
-//                        handler.sendMessage(msg)
+//                        outPutEpc(EPCModel())
 //                    }
 //                }
                 doScan()
@@ -348,8 +343,6 @@ class PackingListChecker : BaseBinding<ActivityPackingListCheckerBinding>(), Nci
 
                             pAdapter.notifyDataSetChanged()
                             wait.hide()
-                            showSuccessDialog(message)
-                            //tos.success("Selesai")
                         }
                     }
                     else -> {
@@ -506,6 +499,12 @@ class PackingListChecker : BaseBinding<ActivityPackingListCheckerBinding>(), Nci
         msg.obj = epc._TID
         handler.sendMessage(msg)
     }
+
+//    fun outPutEpc(epc: String){
+//        val msg = handler.obtainMessage(0)
+//        msg.obj = epc
+//        handler.sendMessage(msg)
+//    }
     // </editor-fold>
 
     data class DolsListModel(

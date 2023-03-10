@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 style="@style/TextAppearance.Material3.TitleLarge"
-                android:text="TO TI"/>
+                android:text="Transfer IO"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/settingBtn"
